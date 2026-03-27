@@ -1,5 +1,7 @@
 # Roadsense - 道路颠簸感知App
 
+![Roadsense](banner.webp)
+
 适用于 **iOS** 的骑行路况记录类应用：在**使用 App 期间**通过 **CoreLocation** 采集轨迹并在 **MapKit** 上展示；通过 **CoreMotion**（设备运动 / userAcceleration）对路面颠簸与冲击做**简化检测与分级**，生成可回顾的骑行会话（本机存储）。
 
 ## 功能概要
