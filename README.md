@@ -14,7 +14,7 @@
 
 - 骑行会话与轨迹数据**默认保存在用户设备**，不经由开发者自有服务器汇总（与当前实现一致）。
 - **未**使用 App 跟踪透明度（ATT）弹窗；不向用户索取 IDFA 用于跨 App 追踪（与 `PrivacyInfo.xcprivacy` 中 `NSPrivacyTracking = false` 一致）。
-- 定位与传感器用途以 [`Info.plist`](Info.plist) 及 App Store Connect **App 隐私**申报为准。
+- 定位与传感器用途以Info.plist文件注明及 App Store Connect **App 隐私**申报为准。
 
 ## 重要提示
 
