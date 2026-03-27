@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Roadsense-道路颠簸感知App</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.6; max-width: 720px; margin: 2rem auto; padding: 0 1.25rem; color: #1d1d1f; }
+    h1 { font-size: 1.75rem; margin-bottom: 0.25rem; }
+    .sub { color: #6e6e73; font-size: 0.95rem; margin-top: 0; }
+    h2 { font-size: 1.2rem; margin-top: 1.75rem; border-bottom: 1px solid #e5e5ea; padding-bottom: 0.35rem; }
+    ul { padding-left: 1.25rem; }
+    strong { font-weight: 600; }
+    .note { background: #f5f5f7; border-radius: 8px; padding: 0.75rem 1rem; margin: 1rem 0; font-size: 0.9rem; }
+    footer { margin-top: 2.5rem; font-size: 0.85rem; color: #6e6e73; }
+  </style>
+</head>
+<body>
+  <h1>Roadsense</h1>
+  <p class="sub">道路颠簸感知 · iOS · 骑行路况记录（本地传感器与地图）</p>
+
+  <h2>产品说明</h2>
+  <p>
+    <strong>Roadsense（道路颠簸感知）</strong>是一款运行在用户 iPhone 上的运动/出行辅助类应用：在骑行过程中，应用使用系统提供的<strong>定位（使用 App 期间）</strong>记录轨迹并在地图上展示；使用设备的<strong>运动传感器（如 userAcceleration）</strong>对路面颠簸与冲击做简化检测与分级。每次骑行可保存为一场「会话」，包含路线、距离、冲击次数及历史列表，便于用户回顾。
+  </p>
+  <p>
+    <strong>重要：</strong>检测结果受车速、手机固定方式、传感器噪声与 GPS 精度影响，仅供日常参考，<strong>不</strong>构成专业道路检测结论或安全保证。
+  </p>
+
+  <h2>功能概要</h2>
+  <ul>
+    <li>首次启动欢迎页与使用说明；记录页请求定位与运动权限（用途与系统弹窗文案见 App 内 Info.plist）。</li>
+    <li>地图展示用户位置（授权后聚焦附近区域）、骑行轨迹_polyline_，以及按路段舒适度着色（绿 / 黄 / 红）。</li>
+    <li>可调节颠簸检测灵敏度；录制中显示合成加速度约读数（示意）。</li>
+    <li>会话数据默认以 JSON 形式保存在本机应用沙盒（Application Support），不上传至开发者自有服务器。</li>
+  </ul>
+
+  <h2>注意</h2>
+  <div class="note">
+    建议在<strong>真机</strong>或支持运动与定位的模拟环境下测试：安装后打开 App → 完成欢迎页 → 在「记录」页允许<strong>使用期间定位</strong>与<strong>运动与健身</strong>权限 → 可短距离移动或「开始骑行」观察地图与读数；结束后在「历史」查看会话。若模拟器运动数据不可用，颠簸检测可能受限，属环境限制。
+  </div>
+
+  <h2>隐私与数据</h2>
+  <ul>
+    <li>应用<strong>不集成</strong> App 跟踪透明度（ATT）请求；<strong>不</strong>将数据用于跨 App 广告追踪（与当前隐私清单一致）。</li>
+    <li>定位与运动数据用于实现声明内的 App 功能；骑行记录默认仅存本机。</li>
+    <li>用户使用本应用即表示理解传感器与地图功能的风险提示；请遵守交通法规，勿在驾驶或骑行中过度操作手机。</li>
+  </ul>
+
+  <h2>系统要求</h2>
+  <ul>
+    <li>需要支持 CoreLocation、CoreMotion 与 MapKit 的设备；部分能力在模拟器上可能不完整。</li>
+  </ul>
+
+  <footer>
+    <p>© Roadsense·道路颠簸感知App</p>
+  </footer>
+</body>
+</html>
